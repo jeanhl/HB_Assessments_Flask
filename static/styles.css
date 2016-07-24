@@ -1,0 +1,33 @@
+/* Your CSS goes here */
+
+#textinput {
+    background-color: yellow;
+}
+
+#submitbutton {
+    background-color: yellow;
+}
+
+.flash{
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    color: red;
+    background-color: yellow; 
+}
+
+.p1 {
+    border-style: solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.motto {
+    font-family: cursive;
+}
+
+#UBERMelon {
+    color: #00cc66;
+}

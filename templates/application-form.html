@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} Welcome to UBERMelong Career Site{% endblock %}
+
+{% block content %}
+    <div class='flash'>
+        <ul>
+            {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <h1> Job Application at UBERMelon </h1>
+
+    <p class='p1'> We at UBERMelon are constantly on the lookout for talented but cheap labor.
+        Due to the immense competition in the agricultural industry, an overzealous 
+        CEO and a large overhead, we are desperate for new hires. If you have 
+        been on the job hunt for a while now and are desperate for something on your 
+        resume, look no further! <br><br>
+        Fill in the application below and wait to hear 
+        from us! 
+    </p>
+
+    <form action="/application-response" method="post">
+            <label for="firstname"> First Name: <input id="textinput" type="text" name="firstname"
+                placeholder="First Name"><br><br> </label>
+            <label for="lastname"> Last Name: <input id="textinput" style="
+                font-weight: bold;" type="text" name="lastname"
+                placeholder="Last Name"><br><br> </label>
+            <label for="email"> Email Contact: <input id="textinput" type="text" name="email"
+                placeholder="We'll contact you here"><br><br> </label>
+            <label for="salary"> Salary Requirement <input id="textinput" type="number" name="salary"
+                placeholder="Hint: Go low"><br><br> </label>       
+            <label for="poistion"> Applying for position: 
+            <select name="position">
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="QA Engineer">QA Enginneer</option>
+                <option value="Product Manager">Product Manager</option>
+                <option value="Intern">Intern</option>
+            </select><br><br> </label>
+        <label for="submitbutton"> <input id="submitbutton" type="submit" value="Give me a job!"> </label>
+    </form>
+{% endblock %}
